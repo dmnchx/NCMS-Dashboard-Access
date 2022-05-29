@@ -1,0 +1,37 @@
+{% include "navbar.html" %}
+
+<html class="no-js" lang="en" dir="ltr">
+
+<body>
+
+<style>
+
+.jumbotron {
+padding-left: 30px;
+padding-right: 30px;
+background: #E6E6E6;
+border: 10px;
+border-color: #4D8AB9;
+border-style:solid;
+text-align: center;
+}
+</style>
+
+
+<div class="container theme-showcase" role="main" style="margin-top: 75px">
+
+    <div class="jumbotron">
+        {% if current_user.is_authenticated %}
+        <h1>Welcome {{current_user.email}}</h1>
+        <p>Welcome to your dashboard access platform, click <a href="/dashboards">here</a> to access your reports.</p>
+        {% else%}
+        <h1>Dashboard Access Tool</h1>
+        <p>Welcome to your dashboard access platform, <a href="/login ">login</a> to access visuals.</p>
+        {% endif %}
+    </div>
+</div>
+
+</body>
+
+</html>
+

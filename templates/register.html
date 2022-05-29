@@ -1,0 +1,21 @@
+{% include 'navbar.html' %}
+{% import 'bootstrap/wtf.html' as wtf %}
+
+{% block content %}
+
+<div class="container theme-showcase" role="main" style="margin-top: 75px">
+
+    <form action="{{ url_for('register') }}" method="POST">
+
+        {{ form.hidden_tag() }}
+        {{ wtf.form_field(form.username) }}
+        {{ wtf.form_field(form.password) }}
+        {{ wtf.form_field(form.repeat_password) }}
+
+        <input type="submit" value="register">
+
+    </form>
+
+</div>
+
+{% endblock %}

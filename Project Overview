@@ -1,0 +1,12 @@
+###### **[HelloChange](https://www.hellochange.co)© Dashboard Access Platform** 
+
+Minimal functionality project that allows users to retrieve their respective dashboards through user login details provided to them by us.
+
+Additional feature of "admin user", will viewing privileges of other user dashboards is still incomplete.
+
+Login detail spreadsheet for distribution of user details to client can be found [here](https://docs.google.com/spreadsheets/d/1laTYVtkXfzgLiP8NPTAT796pjHbqT9h1Uk9R2Slg2AU/edit?usp=sharing).
+
+Currently, this web-app is hosted on Heroku, for free - however if this is a suboptimal hosting solution it should be easy enough to move to another. 
+
+
+

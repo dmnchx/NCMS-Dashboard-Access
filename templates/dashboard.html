@@ -1,0 +1,58 @@
+{% include 'navbar.html' %}
+{% include "bootstrap/base.html" %}
+{% block content %}
+
+
+{% if current_user.is_authenticated %}
+
+<html class="no-js" lang="en" dir="ltr">
+
+<style>
+
+.jumbotron {
+padding-left: 30px;
+padding-right: 30px;
+background: #E6E6E6;
+border: 10px;
+border-color: #4D8AB9;
+border-style:solid;
+text-align: center;
+}
+</style>
+
+
+<body>
+
+
+        <div class="responsive-embed">
+        <iframe
+                width="300"
+                height="225"
+                src={{current_user.dashboard}}
+                frameborder="0"
+                style="border:0"
+                allowfullscreen>
+        </iframe>
+            </div>
+
+
+
+
+         {% else %}
+
+        <div class="container theme-showcase" role="main" style="margin-top: 75px">
+
+    <div class="jumbotron">
+
+        <h1>Access Denied</h1>
+        <p>Please login <a href="/login ">here</a>, to access visuals.</p>
+    </div>
+</div>
+         {% endif %}
+        {% endblock %}
+
+</body>
+
+</html>
+
+
